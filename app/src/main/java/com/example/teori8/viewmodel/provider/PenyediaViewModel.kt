@@ -11,7 +11,7 @@ import com.example.teori8.viewmodel.HomeViewModel
 object PenyediaViewModel {
     val Factory = viewModelFactory {
         initializer {
-            HomeViewModel(aplikasiSiswa().container.repositoriSiswa)
+            HomeViewModel(aplikasiSiswa().container.repositorySiswa)
         }
         initializer {
             EntryViewModel(repositoriSiswa = aplikasiSiswa().container.repositorySiswa)
