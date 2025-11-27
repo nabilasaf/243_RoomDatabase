@@ -17,3 +17,11 @@ object PenyediaViewModel {
             EntryViewModel(repositoriSiswa = aplikasiSiswa().container.repositorySiswa)
         }
     }
+
+    /**
+     * Fungsi ekstensi query untuk objek [Application] dan mengembalikan sebuah instance dari
+     * [AplikasiSiswa].
+     */
+    fun CreationExtras.aplikasiSiswa(): AplikasiSiswa =
+        (this[ViewModelProvider.AndroidViewModelFactory.APPLICATION_KEY] as AplikasiSiswa)
+}
