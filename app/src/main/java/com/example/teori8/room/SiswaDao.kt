@@ -22,8 +22,8 @@ interface SiswaDao {
     @Delete
     suspend fun delete(siswa: Siswa)
 
-//    @Update
-//    suspend fun update(siswa: Siswa)
+    @Update
+    suspend fun update(siswa: Siswa)
 
 
 }
