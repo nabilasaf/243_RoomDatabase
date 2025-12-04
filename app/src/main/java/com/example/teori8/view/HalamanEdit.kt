@@ -34,7 +34,7 @@ fun EditSiswaScreen(
         val coroutineScope = rememberCoroutineScope()
         EntrySiswaBody(
             uiStateSiswa = viewModel.uiStateSiswa,
-            onSiswaValueChange = viewModel::updateUIState,
+            onSiswaValueChange = viewModel::updateUiState,
             onSaveClick = {
                 coroutineScope.launch {
                     viewModel.updateSiswa()
