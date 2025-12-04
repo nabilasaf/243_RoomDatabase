@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface RepositorySiswa {
     fun getAllSiswaStream(): Flow<List<Siswa>>
+    fun getSiswaStream(id: Int): Flow<Siswa?>
     suspend fun insertSiswa(siswa: Siswa)
 }
 
@@ -14,4 +15,5 @@ class OfflineRepositorySiswa(
 ) : RepositorySiswa {
     override fun getAllSiswaStream(): Flow<List<Siswa>> = siswaDao.getAllSiswa()
     override suspend fun insertSiswa(siswa: Siswa) = siswaDao.insert(siswa)
+    override fun getSiswaStream(id: Int): Flow<Siswa?> = siswaDao.getSiswa(id)
 }
