@@ -21,4 +21,5 @@ class OfflineRepositorySiswa(
     override suspend fun deleteSiswa(siswa: Siswa) = siswaDao.delete(siswa)
     override suspend fun updateSiswa(siswa: Siswa) = siswaDao.update(siswa)
 
+
 }
