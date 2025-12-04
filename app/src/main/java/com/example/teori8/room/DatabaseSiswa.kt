@@ -4,9 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import java.time.Instant
 
-@Database(entities = [Siswa::class], version = 1, exportSchema = false)
+
+@Database(entities = [Siswa::class], version = 3, exportSchema = false)
 abstract class DatabaseSiswa : RoomDatabase() {
 
     abstract fun siswaDao(): SiswaDao
@@ -20,6 +20,7 @@ abstract class DatabaseSiswa : RoomDatabase() {
                     context, DatabaseSiswa::class.java,
                     "siswa_database"
                 )
+                    .fallbackToDestructiveMigration()
                     .build().also { Instance = it }
             })
         }

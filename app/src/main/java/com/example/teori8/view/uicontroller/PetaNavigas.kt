@@ -7,15 +7,18 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.teori8.view.EntrySiswaScreen
 import com.example.teori8.view.HomeScreen
 import com.example.teori8.view.route.DestinasiEntry
 import com.example.teori8.view.route.DestinasiHome
 
+
+@Composable
 fun SiswaApp(navController: NavHostController = rememberNavController(), modifier: Modifier = Modifier){
     HostNavigasi(navController = navController)
 }
 
-@OptIn(markerClass = ExperimentalMaterial3Api::class)
+@OptIn( ExperimentalMaterial3Api::class)
 @Composable
 fun HostNavigasi(
     navController: NavHostController,

@@ -33,7 +33,7 @@ import com.example.teori8.viewmodel.provider.PenyediaViewModel
 import kotlinx.coroutines.launch
 import com.example.teori8.R
 
-@OptIn(markerClass = ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EntrySiswaScreen(
     navigateBack: () -> Unit,
@@ -46,7 +46,7 @@ fun EntrySiswaScreen(
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         topBar = {
             SiswaTopAppBar(
-                title = stringResource(id = DestinasiEntry.titleRes),
+                title = stringResource(DestinasiEntry.titleRes),
                 canNavigateBack = true,
                 scrollBehavior = scrollBehavior
             )
@@ -96,7 +96,7 @@ fun EntrySiswaBody(
     }
 }
 
-@OptIn(markerClass = ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormInputSiswa(
     detailSiswa: DetailSiswa,
