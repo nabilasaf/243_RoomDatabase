@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.compose.runtime)
     implementation(libs.androidx.ui)
+    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     ksp(libs.room.compiler)
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.lifecycle.runtime.compose)
